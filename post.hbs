@@ -85,6 +85,7 @@ into the {body} of the default.hbs template --}}
                 </div>
             </header>
 
+{{^has tag="#nofeature"}}{{!--If post has tag #nofeature, then we skip the feature image--}}
             {{#if feature_image}}
             <figure class="post-full-image">
                 {{!-- This is a responsive image, it loads different sizes depending on device
@@ -102,6 +103,7 @@ into the {body} of the default.hbs template --}}
                 />
             </figure>
             {{/if}}
+{{/has}}
 
             <section class="post-full-content">
                 <div class="post-content">
